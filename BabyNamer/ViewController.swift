@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         
         currentBallot = Ballot()
         candidateNameLabel.text = currentBallot.candidateName.name
-        candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective
+        candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective + "?"
     
 //        name = Name.random.name
 //        candidateNameLabel.text = name
