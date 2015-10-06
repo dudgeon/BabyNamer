@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LIw-fP-gJT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,31 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-7Q-qHD">
-                                <rect key="frame" x="208" y="238" width="184" height="57"/>
+                                <rect key="frame" x="208" y="265" width="184" height="57"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="CXg-i5-Yue"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-mL-sWF">
-                                <rect key="frame" x="20" y="317" width="560" height="2"/>
+                                <rect key="frame" x="20" y="356" width="560" height="2"/>
                                 <animations/>
                             </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="centerX" secondItem="TdC-7Q-qHD" secondAttribute="centerX" id="683-V5-JBk"/>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="trailing" secondItem="fzP-XX-B2X" secondAttribute="trailingMargin" id="Fcr-7S-aBb"/>
-                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="top" secondItem="NJf-Cx-MD7" secondAttribute="bottom" constant="218" id="Uy7-fr-sBZ"/>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="leading" secondItem="fzP-XX-B2X" secondAttribute="leadingMargin" id="YLD-aW-ncE"/>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="top" secondItem="TdC-7Q-qHD" secondAttribute="bottom" constant="22" id="eWK-mg-4fT"/>
+                            <constraint firstItem="BA8-mL-sWF" firstAttribute="top" secondItem="TdC-7Q-qHD" secondAttribute="bottom" constant="34" id="MIv-o7-o0A"/>
+                            <constraint firstItem="BA8-mL-sWF" firstAttribute="leading" secondItem="fzP-XX-B2X" secondAttribute="leadingMargin" id="olL-wh-oNs"/>
+                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerX" secondItem="BA8-mL-sWF" secondAttribute="centerX" id="si5-66-qUg"/>
+                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="tvV-Qo-9Vn"/>
+                            <constraint firstItem="BA8-mL-sWF" firstAttribute="trailing" secondItem="fzP-XX-B2X" secondAttribute="trailingMargin" id="wtW-hr-89H"/>
+                            <constraint firstItem="hoW-W3-aEz" firstAttribute="top" secondItem="BA8-mL-sWF" secondAttribute="bottom" constant="242" id="y85-2E-Meb"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ek1-WI-QRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-259" y="447"/>
+            <point key="canvasLocation" x="-477" y="-245"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
