@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     
     
     // MODEL
-    var name: String = ""
-    var adjective: String = ""
+    var currentBallot = Ballot()
+
     
     
     // VIEW
-    @IBOutlet weak var candidateName: UILabel!
-    @IBOutlet weak var candidateAdjective: UILabel!
+    @IBOutlet weak var candidateNameLabel: UILabel!
+    @IBOutlet weak var candidateAdjectiveLabel: UILabel!
     
     
     // CONTROLLER
@@ -27,21 +27,21 @@ class ViewController: UIViewController {
         switch sender.currentTitle! {
             case "Yes":
                 // register a Yes vote
-                print("Yes vote: \(name) == \(adjective)")
-                
+                currentBallot = currentBallot.vote(associateNameWithAdjective: true)
+
+            
             case "No":
                 //register a No vote
-                print("No vote: \(name) != \(adjective)")
+                currentBallot = currentBallot.vote(associateNameWithAdjective: false)
+
                 
             default:
                 print("Sender.currentTitle is neither Yes or No")
         }
         
-        name = Name.random
-        candidateName.text = name
-        
-        adjective = Adjective.random
-        candidateAdjective.text = adjective + "?"
+        // prepare the UI for with a new ballot
+        candidateNameLabel.text = currentBallot.candidateName.name
+        candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective + "?"
         
         
     }
@@ -52,12 +52,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        name = Name.random
-        candidateName.text = name
         
-        adjective = Adjective.random
-        candidateAdjective.text = adjective + "?"
+        currentBallot = Ballot()
+        candidateNameLabel.text = currentBallot.candidateName.name
+        candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective
+    
+//        name = Name.random.name
+//        candidateNameLabel.text = name
+//        
+//        adjective = Adjective.random.adjective
+//        candidateAdjectiveLabel.text = adjective + "?"
         
         
     }

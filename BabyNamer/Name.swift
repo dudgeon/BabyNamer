@@ -10,22 +10,24 @@ import UIKit
 
 
 struct Name {
-//    let name: String
-//    init(name: String){
-//        self.name = name
-//    }
+    let name: String
     
-    static var list: [String] = [
-        "Felix",
-        "Oliver",
-        "Simon",
-        "Amelia",
-        "Ben",
-        "Michael",
+    init(_ name: String){
+        self.name = name
+    }
+    
+    static var list: [Name] = [
+        Name("Felix"),
+        Name("Oliver"),
+        Name("Simon"),
+        Name("Amelia"),
+        Name("Ben"),
+        Name("Michael"),
     ]
     
-    static var random: String {
+    static var random: Name {
         return list[Int(arc4random_uniform(UInt32(list.count)))]
+        
     }
 
 }

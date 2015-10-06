@@ -10,26 +10,23 @@ import UIKit
 
 
 struct Adjective {
-//    let adjective: String
-//    init(adjective: String){
-//        self.adjective = adjective
-//    }
+    let adjective: String
     
-    static var list: [String] = [
-        "Smart",
-        "Funny",
-        "Cruel",
-        "Wise",
-        "Patient",
-        "Kind",        
-    ]
-    
-    static var random: String {
-        return list[Int(arc4random_uniform(UInt32(list.count)))]
+    init(_ adjective: String){
+        self.adjective = adjective
     }
     
-    static var randomQ: String {
-        return self.random + "?"
+    static var list: [Adjective] = [
+        Adjective("Smart"),
+        Adjective("Funny"),
+        Adjective("Cruel"),
+        Adjective("Wise"),
+        Adjective("Patient"),
+        Adjective("Kind"),
+    ]
+    
+    static var random: Adjective {
+        return list[Int(arc4random_uniform(UInt32(list.count)))]
     }
     
 }

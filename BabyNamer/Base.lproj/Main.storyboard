@@ -103,8 +103,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="candidateAdjective" destination="kxZ-FT-Hui" id="I43-LA-nJJ"/>
-                        <outlet property="candidateName" destination="CpB-2c-4iP" id="HoH-tS-Xdy"/>
+                        <outlet property="candidateAdjectiveLabel" destination="kxZ-FT-Hui" id="NH7-8U-aKs"/>
+                        <outlet property="candidateNameLabel" destination="CpB-2c-4iP" id="IbH-q4-eYK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
