@@ -26,20 +26,17 @@ class ViewController: UIViewController {
     @IBAction func randomize(sender: UIButton) {
         
         // REMOVE Test Parse Connectivity:
-        let testObject = PFObject(className: "TestVoteRecord")
-        testObject["name"] = currentBallot.candidateName.name
-        testObject["adjective"] = currentBallot.candidateAdjective.adjective
-        
+
         switch sender.currentTitle! {
             case "Yes":
                 // register a Yes vote
                 currentBallot = currentBallot.vote(associateNameWithAdjective: true)
-                testObject["associate"] = true
+
             
             case "No":
                 //register a No vote
                 currentBallot = currentBallot.vote(associateNameWithAdjective: false)
-                testObject["associate"] = false
+
                 
             default:
                 print("Sender.currentTitle is neither Yes or No")
@@ -48,12 +45,6 @@ class ViewController: UIViewController {
         // prepare the UI for with a new ballot
         candidateNameLabel.text = currentBallot.candidateName.name
         candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective + "?"
-        
-
-        // REMOVE Test Parse Connectivity:
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-        }
         
         
     }
