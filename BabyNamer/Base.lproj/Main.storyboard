@@ -8,7 +8,7 @@
         <!--Loading-->
         <scene sceneID="X5f-sR-JeF">
             <objects>
-                <viewController title="Loading" id="LIw-fP-gJT" sceneMemberID="viewController">
+                <viewController title="Loading" id="LIw-fP-gJT" customClass="LoadingViewController" customModule="BabyNamer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NJf-Cx-MD7"/>
                         <viewControllerLayoutGuide type="bottom" id="hoW-W3-aEz"/>
@@ -18,35 +18,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-7Q-qHD">
-                                <rect key="frame" x="208" y="265" width="184" height="57"/>
+                                <rect key="frame" x="208" y="271" width="184" height="57"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="184" id="CXg-i5-Yue"/>
+                                    <constraint firstAttribute="width" constant="184" id="p4j-J4-5zM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-mL-sWF">
-                                <rect key="frame" x="20" y="356" width="560" height="2"/>
-                                <animations/>
-                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="top" secondItem="TdC-7Q-qHD" secondAttribute="bottom" constant="34" id="MIv-o7-o0A"/>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="leading" secondItem="fzP-XX-B2X" secondAttribute="leadingMargin" id="olL-wh-oNs"/>
-                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerX" secondItem="BA8-mL-sWF" secondAttribute="centerX" id="si5-66-qUg"/>
-                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="tvV-Qo-9Vn"/>
-                            <constraint firstItem="BA8-mL-sWF" firstAttribute="trailing" secondItem="fzP-XX-B2X" secondAttribute="trailingMargin" id="wtW-hr-89H"/>
-                            <constraint firstItem="hoW-W3-aEz" firstAttribute="top" secondItem="BA8-mL-sWF" secondAttribute="bottom" constant="242" id="y85-2E-Meb"/>
+                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerY" secondItem="fzP-XX-B2X" secondAttribute="centerY" id="H3F-ZA-kYe"/>
+                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="yrh-qC-N9C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowVote" id="4Wv-Fr-thU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ek1-WI-QRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-477" y="-245"/>
+            <point key="canvasLocation" x="-265" y="379"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -89,11 +84,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYY-Hd-MOw">
-                                <rect key="frame" x="45" y="428" width="120" height="78"/>
+                                <rect key="frame" x="45" y="428" width="140" height="147"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="iwc-8G-CCC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="iwc-8G-CCC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -105,12 +100,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhB-ZG-Wpq">
-                                <rect key="frame" x="435" y="428" width="120" height="78"/>
+                                <rect key="frame" x="415" y="428" width="140" height="147"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.40850749680477783" green="0.82453926282051282" blue="0.721560443500747" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="hTa-xv-dcd"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" title="Yes">
@@ -125,15 +117,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aTF-xR-xDw" firstAttribute="top" secondItem="CpB-2c-4iP" secondAttribute="bottom" constant="30" id="6D3-lS-H00"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="LYY-Hd-MOw" secondAttribute="bottom" constant="25" id="8r2-fl-0aP"/>
                             <constraint firstItem="CpB-2c-4iP" firstAttribute="centerX" secondItem="yzf-Sl-b1D" secondAttribute="centerX" id="9uW-cx-gvq"/>
                             <constraint firstItem="yzf-Sl-b1D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="SyG-8k-i7h"/>
+                            <constraint firstItem="BhB-ZG-Wpq" firstAttribute="width" secondItem="LYY-Hd-MOw" secondAttribute="width" id="YhV-3a-ufq"/>
                             <constraint firstItem="LYY-Hd-MOw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="bo2-P9-jmr"/>
                             <constraint firstItem="BhB-ZG-Wpq" firstAttribute="top" secondItem="kxZ-FT-Hui" secondAttribute="bottom" constant="62" id="dPs-g6-r44"/>
                             <constraint firstItem="CpB-2c-4iP" firstAttribute="top" secondItem="yzf-Sl-b1D" secondAttribute="bottom" constant="29" id="glF-hn-OqX"/>
                             <constraint firstItem="LYY-Hd-MOw" firstAttribute="top" secondItem="kxZ-FT-Hui" secondAttribute="bottom" constant="62" id="jTm-BM-uZO"/>
-                            <constraint firstItem="BhB-ZG-Wpq" firstAttribute="width" secondItem="LYY-Hd-MOw" secondAttribute="width" id="kFR-VZ-mlU"/>
                             <constraint firstItem="kxZ-FT-Hui" firstAttribute="top" secondItem="aTF-xR-xDw" secondAttribute="bottom" constant="29" id="krw-vf-PZe"/>
                             <constraint firstItem="CpB-2c-4iP" firstAttribute="centerX" secondItem="aTF-xR-xDw" secondAttribute="centerX" id="ruU-sf-2L3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="BhB-ZG-Wpq" secondAttribute="bottom" constant="25" id="uyq-0K-8HX"/>
                             <constraint firstItem="aTF-xR-xDw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w8S-UG-80k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BhB-ZG-Wpq" secondAttribute="trailing" constant="25" id="zFd-D1-6qa"/>
                             <constraint firstItem="aTF-xR-xDw" firstAttribute="centerX" secondItem="kxZ-FT-Hui" secondAttribute="centerX" id="zp9-hE-B0y"/>

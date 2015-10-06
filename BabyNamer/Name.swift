@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 
 struct Name {
@@ -18,16 +19,32 @@ struct Name {
     
     static var list: [Name] = [
         Name("Felix"),
-        Name("Oliver"),
-        Name("Simon"),
-        Name("Amelia"),
-        Name("Ben"),
-        Name("Michael"),
     ]
     
     static var random: Name {
         return list[Int(arc4random_uniform(UInt32(list.count)))]
         
+    }
+    
+    static func populate(){
+        let query = PFQuery(className: "Name")
+        query.findObjectsInBackgroundWithBlock {
+            (names: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                // success!
+                if let names = names as [PFObject]! {
+                    for name in names {
+                        print(name.objectId)
+                        self.list.append(Name(name["name"] as! String))
+                    }
+                }
+                
+            } else {
+                // error!
+            }
+        } // end query.find
     }
 
 }
