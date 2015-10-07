@@ -17,31 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-7Q-qHD">
-                                <rect key="frame" x="208" y="271" width="184" height="57"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPs-43-ijj">
+                                <rect key="frame" x="215" y="483" width="171" height="69"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="184" id="p4j-J4-5zM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Let's go!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="9Ul-SC-R9e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerY" secondItem="fzP-XX-B2X" secondAttribute="centerY" id="H3F-ZA-kYe"/>
-                            <constraint firstItem="TdC-7Q-qHD" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="yrh-qC-N9C"/>
+                            <constraint firstItem="hoW-W3-aEz" firstAttribute="top" secondItem="lPs-43-ijj" secondAttribute="bottom" constant="48" id="3zo-RP-JPE"/>
+                            <constraint firstItem="lPs-43-ijj" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="Pd1-8X-J5R"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="lPs-43-ijj" id="QWT-0I-Pw7"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowVote" id="4Wv-Fr-thU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ek1-WI-QRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-265" y="379"/>
+            <point key="canvasLocation" x="-309" y="390"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -76,7 +76,7 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjective?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxZ-FT-Hui">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjective?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kxZ-FT-Hui">
                                 <rect key="frame" x="179" y="309" width="239.5" height="57.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
@@ -84,11 +84,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYY-Hd-MOw">
-                                <rect key="frame" x="45" y="428" width="140" height="147"/>
+                                <rect key="frame" x="45" y="428" width="120" height="147"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="iwc-8G-CCC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="iwc-8G-CCC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -100,7 +100,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhB-ZG-Wpq">
-                                <rect key="frame" x="415" y="428" width="140" height="147"/>
+                                <rect key="frame" x="435" y="428" width="120" height="147"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.40850749680477783" green="0.82453926282051282" blue="0.721560443500747" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
@@ -142,4 +142,7 @@
             </objects>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Wv-Fr-thU"/>
+    </inferredMetricsTieBreakers>
 </document>
