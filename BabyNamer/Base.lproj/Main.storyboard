@@ -26,20 +26,42 @@
                                     <action selector="nextButton:" destination="LIw-fP-gJT" eventType="touchUpInside" id="THg-Aa-FRG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXg-bQ-GDc">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXg-bQ-GDc">
                                 <rect key="frame" x="201" y="271" width="198.5" height="57"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby Namer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FqC-j6-yeX">
+                                <rect key="frame" x="106" y="48" width="388.5" height="85"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" red="0.36847490872669658" green="0.92461939102564106" blue="0.74826962735585267" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't over think it. Tap once. There is no undo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUn-W8-Klx">
+                                <rect key="frame" x="28" y="162" width="544" height="28.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="FqC-j6-yeX" secondAttribute="trailing" constant="16" id="2Vw-s3-paa"/>
                             <constraint firstItem="hoW-W3-aEz" firstAttribute="top" secondItem="lPs-43-ijj" secondAttribute="bottom" constant="48" id="3zo-RP-JPE"/>
+                            <constraint firstItem="lUn-W8-Klx" firstAttribute="top" secondItem="FqC-j6-yeX" secondAttribute="bottom" constant="29" id="CiJ-B4-PAO"/>
                             <constraint firstItem="qXg-bQ-GDc" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="F0U-oY-x6N"/>
+                            <constraint firstItem="lUn-W8-Klx" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fzP-XX-B2X" secondAttribute="leadingMargin" constant="8" id="KGA-r4-oAn"/>
+                            <constraint firstItem="lUn-W8-Klx" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="KNz-nE-wt5"/>
                             <constraint firstItem="lPs-43-ijj" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="Pd1-8X-J5R"/>
+                            <constraint firstItem="FqC-j6-yeX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fzP-XX-B2X" secondAttribute="leadingMargin" constant="16" id="QrZ-db-ep3"/>
+                            <constraint firstItem="FqC-j6-yeX" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="ecz-G9-UUZ"/>
+                            <constraint firstItem="FqC-j6-yeX" firstAttribute="top" secondItem="NJf-Cx-MD7" secondAttribute="bottom" constant="28" id="hhq-EH-rjj"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="lUn-W8-Klx" secondAttribute="trailing" constant="8" id="oKf-jq-5MO"/>
                             <constraint firstItem="qXg-bQ-GDc" firstAttribute="centerY" secondItem="fzP-XX-B2X" secondAttribute="centerY" id="td0-gl-GkU"/>
                         </constraints>
                     </view>
