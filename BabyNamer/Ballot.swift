@@ -32,6 +32,10 @@ struct Ballot {
         // add the association (Bool) to the existing ballot
         self.associateNameWithAdjective = associate
         self.parseBallot["associate"] = associate
+        self.parseBallot["countCurrentTaps"] = countCurrentTaps
+        self.parseBallot["countSessionTaps"] = countSessionTaps
+        self.parseBallot["userUnique"] = userUnique
+        self.parseBallot["sessionUnique"] = sessionUnique
         self.parseBallot["test"] = true // REMOVE before production
         
         // Save to Parse

@@ -12,10 +12,16 @@ import UIKit
 
 struct defaultsKeys {
     static let keyOne = "firstVisit"
+    static let keyTwo = "userUnique"
 }
 
 let defaults = NSUserDefaults.standardUserDefaults()
 
-var tapCounter = 0
-var sessionCounter = 0
+var countCurrentTaps = 0
+var countSessionTaps = 0
+// var countUserTaps = 0 // use local storage
+
+let sessionUnique = NSUUID().UUIDString
+var userUnique: String = ""
+
 

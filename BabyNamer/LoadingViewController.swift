@@ -22,6 +22,7 @@ class LoadingViewController: UIViewController {
         // if user has already visited, segue them to the main screen
         if let firstVisit = defaults.stringForKey(defaultsKeys.keyOne) {
             if firstVisit == "false" {
+                
                 performSegueWithIdentifier("ShowVote", sender: self)
             }
         }
@@ -50,17 +51,43 @@ class LoadingViewController: UIViewController {
     
     
     
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // CHECK FOR FIRST VISIT
         if let firstVisit = defaults.stringForKey(defaultsKeys.keyOne) {
+            
+            // REPEAT VISIT
             if firstVisit == "false" {
+                
+                print("Not first visit!")
+                
+                // Prepare the UI for repeat visitor
                 nextButtonOutlet.hidden = true
                 loadingLabel.hidden = false
+                
+                // Retrieve UserUnique
+                if let tempUserUnique = defaults.stringForKey(defaultsKeys.keyTwo) {
+                    userUnique = tempUserUnique
+                }
             }
         }
+        // FIRST VISIT (or purged user settings)
+        else {
+            
+            print("First visit!")
+            
+            // Generate a userUnique UUID
+            userUnique = NSUUID().UUIDString
+            
+            defaults.setValue(userUnique, forKey: defaultsKeys.keyTwo)
+        }
+        
+        
+        
         
 
         // RETRIEVE NAMES -- launches background operation

@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     @IBAction func randomize(sender: UIButton) {
         
         // increment counters
-        tapCounter++
-        sessionCounter++
+        countCurrentTaps++
+        countSessionTaps++
 
         switch sender.currentTitle! {
             case "Yes":
@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         candidateNameLabel.text = currentBallot.candidateName.name
         candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective + "?"
         
-        if tapCounter == 10 {
-            tapCounter = 0
+        if countCurrentTaps == 10 {
+            countCurrentTaps = 0
             performSegueWithIdentifier("DidYouKnow", sender: self)
         }
         

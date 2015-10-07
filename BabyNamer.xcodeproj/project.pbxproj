@@ -73,16 +73,16 @@
 		6C55DB571BC390F6003F5380 /* BabyNamer */ = {
 			isa = PBXGroup;
 			children = (
-				6C55DB6C1BC39126003F5380 /* Name.swift */,
-				6C2C9CF61BC4F6F5004266E7 /* InfoViewController.swift */,
 				6CC520D91BC467A900B2F90C /* LoadingViewController.swift */,
-				6C6925C71BC4E66E00D5DD56 /* LocalStore.swift */,
-				6C55DB581BC390F6003F5380 /* AppDelegate.swift */,
 				6C55DB5A1BC390F6003F5380 /* ViewController.swift */,
+				6C2C9CF61BC4F6F5004266E7 /* InfoViewController.swift */,
+				6C6925C71BC4E66E00D5DD56 /* LocalStore.swift */,
+				6C55DB6C1BC39126003F5380 /* Name.swift */,
 				6C72A7D11BC39EAA00A1F5EF /* Adjective.swift */,
 				6C72A7D51BC40A9600A1F5EF /* Ballot.swift */,
-				6C55DB5C1BC390F6003F5380 /* Main.storyboard */,
+				6C55DB581BC390F6003F5380 /* AppDelegate.swift */,
 				6C55DB5F1BC390F6003F5380 /* Assets.xcassets */,
+				6C55DB5C1BC390F6003F5380 /* Main.storyboard */,
 				6C55DB611BC390F6003F5380 /* LaunchScreen.storyboard */,
 				6C55DB641BC390F6003F5380 /* Info.plist */,
 			);

@@ -189,8 +189,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-c8-0sO">
-                                <rect key="frame" x="146" y="50" width="308.5" height="57"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-c8-0sO">
+                                <rect key="frame" x="151.5" y="50" width="297.5" height="57"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,6 +227,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LJ6-aG-pIv"/>
+        <segue reference="4Wv-Fr-thU"/>
     </inferredMetricsTieBreakers>
 </document>
