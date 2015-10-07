@@ -12,9 +12,11 @@ import Parse
 
 struct Name {
     let name: String
+    let namePFObject: PFObject
     
-    init(_ name: String){
+    init(name: String, namePFObject: PFObject){
         self.name = name
+        self.namePFObject = namePFObject
     }
     
     static var list: [Name] = []

@@ -94,15 +94,19 @@ class LoadingViewController: UIViewController {
         let nameQuery = PFQuery(className: "Name")
         nameQuery.cachePolicy = .CacheThenNetwork // caching per Parse docs https://www.parse.com/docs/ios/guide#queries-caching-queries
         nameQuery.findObjectsInBackgroundWithBlock {
-            (names: [PFObject]?, error: NSError?) -> Void in
+            (parseNames: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
                 
                 // success!
                 Name.list = []
-                if let names = names as [PFObject]! {
-                    for name in names {
-                        Name.list.append(Name(name["name"] as! String))
+                if let parseNames = parseNames as [PFObject]! {
+                    for parseName in parseNames {
+                        
+                        let name = Name(name: parseName["name"] as! String, namePFObject: parseName)
+                        print("Name: \(name.name), ObjectId: \(name.namePFObject.objectId!)")
+                        
+                        Name.list.append(name)
                     }
                 }
                 self.namesReady = true
@@ -118,16 +122,18 @@ class LoadingViewController: UIViewController {
         let adjectiveQuery = PFQuery(className: "Adjective")
         adjectiveQuery.cachePolicy = .CacheThenNetwork
         adjectiveQuery.findObjectsInBackgroundWithBlock {
-            (adjectives: [PFObject]?, error: NSError?) -> Void in
+            (parseAdjectives: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
                 
                 // success!
                 Adjective.list = []
-                if let adjective = adjectives as [PFObject]! {
+                if let parseAdjective = parseAdjectives as [PFObject]! {
                     
-                    for adjective in adjective {
-                        Adjective.list.append(Adjective(adjective["adjective"] as! String))
+                    for parseAdjective in parseAdjective {
+                        
+                        let adjective = Adjective(adjective: parseAdjective["adjective"] as! String, adjectivePFObject: parseAdjective)
+                        Adjective.list.append(adjective)
                     }
                 }
                 self.adjectivesReady = true

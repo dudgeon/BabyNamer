@@ -20,10 +20,13 @@ struct Ballot {
         let name = Name.random
         self.candidateName = name
         self.parseBallot["name"] = name.name
+        self.parseBallot["nameObject"] = name.namePFObject
+
         
         let adjective = Adjective.random
         self.candidateAdjective = adjective
         self.parseBallot["adjective"] = adjective.adjective
+        self.parseBallot["adjectiveObject"] = adjective.adjectivePFObject
     }
     
     // let the controller vote
