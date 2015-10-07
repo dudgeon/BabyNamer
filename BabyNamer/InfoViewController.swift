@@ -11,6 +11,9 @@ import UIKit
 class InfoViewController: UIViewController {
 
     // MODEL
+    let arrayOfTriviaItems = [
+        
+    ]
     
     // VIEW
     

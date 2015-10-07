@@ -104,7 +104,6 @@ class LoadingViewController: UIViewController {
                     for parseName in parseNames {
                         
                         let name = Name(name: parseName["name"] as! String, namePFObject: parseName)
-                        print("Name: \(name.name), ObjectId: \(name.namePFObject.objectId!)")
                         
                         Name.list.append(name)
                     }
