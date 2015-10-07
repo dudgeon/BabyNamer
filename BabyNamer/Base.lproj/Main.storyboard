@@ -190,16 +190,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-c8-0sO">
-                                <rect key="frame" x="151.5" y="50" width="297.5" height="57"/>
+                                <rect key="frame" x="151" y="50" width="297.5" height="57"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-Sp-4CO">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-Sp-4CO">
                                 <rect key="frame" x="220" y="507" width="161" height="55"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Game on!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -208,18 +208,34 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="GameOn" id="LJ6-aG-pIv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="QyC-yG-TZj">
+                                <rect key="frame" x="258" y="279" width="84.5" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.45758070844175264" green="0.92720352562051278" blue="0.81313045113559168" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kCA-c8-0sO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="beK-7Y-mh2" secondAttribute="leadingMargin" constant="20" id="7We-Qh-BCW"/>
+                            <constraint firstItem="QyC-yG-TZj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kCA-c8-0sO" secondAttribute="bottom" constant="16" id="8GV-dL-FQ9"/>
                             <constraint firstItem="kCA-c8-0sO" firstAttribute="centerX" secondItem="beK-7Y-mh2" secondAttribute="centerX" id="Aqj-8o-LBt"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="kCA-c8-0sO" secondAttribute="trailing" constant="20" id="CI9-hj-lyw"/>
+                            <constraint firstItem="QyC-yG-TZj" firstAttribute="centerY" secondItem="beK-7Y-mh2" secondAttribute="centerY" id="PMF-n1-h1R"/>
+                            <constraint firstItem="QyC-yG-TZj" firstAttribute="centerX" secondItem="beK-7Y-mh2" secondAttribute="centerX" id="RnU-V6-Aal"/>
                             <constraint firstItem="Y9e-ee-Nwc" firstAttribute="top" secondItem="cYP-Sp-4CO" secondAttribute="bottom" constant="38" id="aQl-GD-mGf"/>
                             <constraint firstItem="kCA-c8-0sO" firstAttribute="top" secondItem="hQL-cJ-SqR" secondAttribute="bottom" constant="30" id="gVB-fb-JwK"/>
+                            <constraint firstItem="QyC-yG-TZj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="beK-7Y-mh2" secondAttribute="leadingMargin" constant="8" id="jIp-EQ-F8E"/>
                             <constraint firstItem="cYP-Sp-4CO" firstAttribute="centerX" secondItem="beK-7Y-mh2" secondAttribute="centerX" id="kc9-J6-Pot"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="QyC-yG-TZj" secondAttribute="trailing" constant="8" id="mRX-70-EPf"/>
+                            <constraint firstItem="cYP-Sp-4CO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QyC-yG-TZj" secondAttribute="bottom" constant="16" id="o9d-kB-hs3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="middleLabel" destination="QyC-yG-TZj" id="8Cy-hU-YCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoS-Cl-rdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +243,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Wv-Fr-thU"/>
+        <segue reference="LJ6-aG-pIv"/>
     </inferredMetricsTieBreakers>
 </document>
