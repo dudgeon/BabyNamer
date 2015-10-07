@@ -177,10 +177,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Qbc-Yk-gK6">
             <objects>
-                <viewController id="jAc-pZ-ehR" sceneMemberID="viewController">
+                <viewController id="jAc-pZ-ehR" customClass="InfoViewController" customModule="BabyNamer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hQL-cJ-SqR"/>
                         <viewControllerLayoutGuide type="bottom" id="Y9e-ee-Nwc"/>
@@ -189,22 +189,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-c8-0sO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-c8-0sO">
                                 <rect key="frame" x="146" y="50" width="308.5" height="57"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-Sp-4CO">
-                                <rect key="frame" x="229" y="511" width="143" height="51"/>
+                                <rect key="frame" x="220" y="507" width="161" height="55"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Game on!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="LJ6-aG-pIv"/>
+                                    <action selector="gameOn:" destination="jAc-pZ-ehR" eventType="touchUpInside" id="oSs-d2-1Xq"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="GameOn" id="LJ6-aG-pIv"/>
                                 </connections>
                             </button>
                         </subviews>

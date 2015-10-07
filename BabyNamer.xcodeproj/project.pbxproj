@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2C9CF71BC4F6F5004266E7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C9CF61BC4F6F5004266E7 /* InfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6C55DB591BC390F6003F5380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55DB581BC390F6003F5380 /* AppDelegate.swift */; };
 		6C55DB5B1BC390F6003F5380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55DB5A1BC390F6003F5380 /* ViewController.swift */; };
 		6C55DB5E1BC390F6003F5380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C55DB5C1BC390F6003F5380 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		422AE787CC20F1CE87E09C3F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C4C65D77552858385D468E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6C2C9CF61BC4F6F5004266E7 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		6C55DB551BC390F6003F5380 /* BabyNamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C55DB581BC390F6003F5380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C55DB5A1BC390F6003F5380 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				6C55DB6C1BC39126003F5380 /* Name.swift */,
+				6C2C9CF61BC4F6F5004266E7 /* InfoViewController.swift */,
 				6CC520D91BC467A900B2F90C /* LoadingViewController.swift */,
 				6C6925C71BC4E66E00D5DD56 /* LocalStore.swift */,
 				6C55DB581BC390F6003F5380 /* AppDelegate.swift */,
@@ -230,6 +233,7 @@
 				6C72A7D61BC40A9600A1F5EF /* Ballot.swift in Sources */,
 				6C55DB5B1BC390F6003F5380 /* ViewController.swift in Sources */,
 				6C55DB591BC390F6003F5380 /* AppDelegate.swift in Sources */,
+				6C2C9CF71BC4F6F5004266E7 /* InfoViewController.swift in Sources */,
 				6CC520DA1BC467A900B2F90C /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
