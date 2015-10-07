@@ -16,3 +16,6 @@ struct defaultsKeys {
 
 let defaults = NSUserDefaults.standardUserDefaults()
 
+var tapCounter = 0
+var sessionCounter = 0
+

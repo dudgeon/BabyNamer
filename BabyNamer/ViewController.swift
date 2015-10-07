@@ -25,13 +25,16 @@ class ViewController: UIViewController {
     // CONTROLLER
     @IBAction func randomize(sender: UIButton) {
         
-        // REMOVE Test Parse Connectivity:
+        // increment counters
+        tapCounter++
+        sessionCounter++
 
         switch sender.currentTitle! {
             case "Yes":
                 // register a Yes vote
                 currentBallot = currentBallot.vote(associateNameWithAdjective: true)
 
+            
             
             case "No":
                 //register a No vote
@@ -46,6 +49,10 @@ class ViewController: UIViewController {
         candidateNameLabel.text = currentBallot.candidateName.name
         candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective + "?"
         
+        if tapCounter == 10 {
+            tapCounter = 0
+            performSegueWithIdentifier("DidYouKnow", sender: self)
+        }
         
     }
     
