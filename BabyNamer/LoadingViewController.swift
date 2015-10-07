@@ -33,6 +33,7 @@ class LoadingViewController: UIViewController {
     
     // VIEW
     @IBOutlet weak var nextButtonOutlet: UIButton!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     
     // CONTROLLER
@@ -52,6 +53,14 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // CHECK FOR FIRST VISIT
+        if let firstVisit = defaults.stringForKey(defaultsKeys.keyOne) {
+            if firstVisit == "false" {
+                nextButtonOutlet.hidden = true
+                loadingLabel.hidden = false
+            }
+        }
         
 
         // RETRIEVE NAMES -- launches background operation

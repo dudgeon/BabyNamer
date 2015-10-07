@@ -26,15 +26,25 @@
                                     <action selector="nextButton:" destination="LIw-fP-gJT" eventType="touchUpInside" id="THg-Aa-FRG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXg-bQ-GDc">
+                                <rect key="frame" x="201" y="271" width="198.5" height="57"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hoW-W3-aEz" firstAttribute="top" secondItem="lPs-43-ijj" secondAttribute="bottom" constant="48" id="3zo-RP-JPE"/>
+                            <constraint firstItem="qXg-bQ-GDc" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="F0U-oY-x6N"/>
                             <constraint firstItem="lPs-43-ijj" firstAttribute="centerX" secondItem="fzP-XX-B2X" secondAttribute="centerX" id="Pd1-8X-J5R"/>
+                            <constraint firstItem="qXg-bQ-GDc" firstAttribute="centerY" secondItem="fzP-XX-B2X" secondAttribute="centerY" id="td0-gl-GkU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingLabel" destination="qXg-bQ-GDc" id="E6Y-F2-bxA"/>
                         <outlet property="nextButton" destination="lPs-43-ijj" id="O40-gC-A6c"/>
                         <outlet property="nextButtonOutlet" destination="lPs-43-ijj" id="g7C-uT-glC"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowVote" id="4Wv-Fr-thU"/>
