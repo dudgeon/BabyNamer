@@ -56,10 +56,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Name.populate()
-        Adjective.populate()
-        
-        
         currentBallot = Ballot()
         candidateNameLabel.text = currentBallot.candidateName.name
         candidateAdjectiveLabel.text = currentBallot.candidateAdjective.adjective + "?"

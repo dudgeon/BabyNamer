@@ -26,31 +26,7 @@ struct Adjective {
     }
     
     
-    static func populate(){
-        let query = PFQuery(className: "Adjective")
-        query.findObjectsInBackgroundWithBlock {
-            (adjectives: [PFObject]?, error: NSError?) -> Void in
-            
-            if error == nil {
-                
-                // success!
-                if let adjective = adjectives as [PFObject]! {
-                    
-                    for adjective in adjective {
-                        print(adjective.objectId)
-                        self.list.append(Adjective(adjective["adjective"] as! String))
-                    }
-                    
-                }
-                
-            } else {
-                
-                // error!
-                
-            }
-            
-        } // end query.find
-    }
+    
     
 }
 
