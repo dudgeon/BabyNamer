@@ -8,7 +8,7 @@
         <!--Loading-->
         <scene sceneID="X5f-sR-JeF">
             <objects>
-                <viewController title="Loading" id="LIw-fP-gJT" customClass="LoadingViewController" customModule="BabyNamer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Loading" id="LIw-fP-gJT" customClass="LoadingViewController" customModule="Baby_Namer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NJf-Cx-MD7"/>
                         <viewControllerLayoutGuide type="bottom" id="hoW-W3-aEz"/>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="28" y="162" width="544" height="28.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -79,7 +79,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BabyNamer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Baby_Namer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -95,7 +95,7 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpB-2c-4iP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CpB-2c-4iP">
                                 <rect key="frame" x="232" y="136" width="134.5" height="57.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
@@ -154,16 +154,20 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kxZ-FT-Hui" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="5bQ-v5-ohH"/>
                             <constraint firstItem="aTF-xR-xDw" firstAttribute="top" secondItem="CpB-2c-4iP" secondAttribute="bottom" constant="30" id="6D3-lS-H00"/>
                             <constraint firstItem="CpB-2c-4iP" firstAttribute="centerX" secondItem="yzf-Sl-b1D" secondAttribute="centerX" id="9uW-cx-gvq"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CpB-2c-4iP" secondAttribute="trailing" constant="8" id="EEb-RG-pKy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LYY-Hd-MOw" secondAttribute="bottom" constant="28" id="Me9-hV-Xu4"/>
                             <constraint firstItem="yzf-Sl-b1D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="SyG-8k-i7h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BhB-ZG-Wpq" secondAttribute="bottom" constant="28" id="WPB-ua-V7L"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="kxZ-FT-Hui" secondAttribute="trailing" constant="8" id="Wue-2F-jiU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BhB-ZG-Wpq" secondAttribute="trailing" constant="20" id="cXz-Zr-cTv"/>
                             <constraint firstItem="LYY-Hd-MOw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="fT3-Fn-I86"/>
                             <constraint firstItem="CpB-2c-4iP" firstAttribute="top" secondItem="yzf-Sl-b1D" secondAttribute="bottom" constant="29" id="glF-hn-OqX"/>
                             <constraint firstItem="kxZ-FT-Hui" firstAttribute="top" secondItem="aTF-xR-xDw" secondAttribute="bottom" constant="29" id="krw-vf-PZe"/>
                             <constraint firstItem="CpB-2c-4iP" firstAttribute="centerX" secondItem="aTF-xR-xDw" secondAttribute="centerX" id="ruU-sf-2L3"/>
+                            <constraint firstItem="CpB-2c-4iP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="vaR-kI-PXl"/>
                             <constraint firstItem="aTF-xR-xDw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w8S-UG-80k"/>
                             <constraint firstItem="aTF-xR-xDw" firstAttribute="centerX" secondItem="kxZ-FT-Hui" secondAttribute="centerX" id="zp9-hE-B0y"/>
                         </constraints>
@@ -180,7 +184,7 @@
         <!--Info View Controller-->
         <scene sceneID="Qbc-Yk-gK6">
             <objects>
-                <viewController id="jAc-pZ-ehR" customClass="InfoViewController" customModule="BabyNamer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jAc-pZ-ehR" customClass="InfoViewController" customModule="Baby_Namer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hQL-cJ-SqR"/>
                         <viewControllerLayoutGuide type="bottom" id="Y9e-ee-Nwc"/>
@@ -196,8 +200,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-Sp-4CO">
-                                <rect key="frame" x="220" y="507" width="161" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-Sp-4CO">
+                                <rect key="frame" x="224" y="507" width="153" height="55"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <state key="normal" title="Game on!">

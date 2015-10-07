@@ -12,12 +12,13 @@ class InfoViewController: UIViewController {
 
     // MODEL
     let arrayOfTriviaItems = [
-        "99% of people think \"Zoe\" sounds \"Smelly\"!",
+        "92% of people think \"Zoe\" sounds \"Smelly\"!",
         "Bears can smell fear!",
         "Sharks can't swim backwards!",
         "Super Moon!",
-        "Helium is light than air!",
-        "The north pole is in Canada!"
+        "Helium is lighter than air!",
+        "The north pole is in Canada!",
+        "The highest temperature on Mars is about 70 degrees fahrenheit!"
         
     ]
     

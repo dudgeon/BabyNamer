@@ -39,6 +39,7 @@ struct Ballot {
         self.parseBallot["countSessionTaps"] = countSessionTaps
         self.parseBallot["userUnique"] = userUnique
         self.parseBallot["sessionUnique"] = sessionUnique
+        self.parseBallot["summarized"] = false
         self.parseBallot["test"] = true // REMOVE before production
         
         // Save to Parse
